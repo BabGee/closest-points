@@ -1,8 +1,22 @@
 # closest-points
 
 
-## A Simple Django application with an API that receives a set of points on a grid as semicolon separated values. And then it finds the points that are closest to each other
+A Simple Django application with an API that receives a set of points on a grid as semicolon separated values. And then it finds the points that are closest to each other
 
+## How It works
+
+make an POST API call to endpoint:
+
+```bash
+http://127.0.0.1:8000/api/v1/points/
+``` 
+pass on the body(set of points on a grid as semicolon separated values):
+
+"points": "2,2;-1,30;20,11;4,5"
+
+## Example Postman request screenshot
+
+[![Screenshot-from-2023-05-18-14-49-37.png](https://i.postimg.cc/mZShN7vp/Screenshot-from-2023-05-18-14-49-37.png)](https://postimg.cc/jCLsRndy)
 
 
 ## Getting Started
@@ -29,7 +43,7 @@ git clone https://github.com/BabGee/closest-points.git
 cd into the folder
 
 ```bash
-cd closest-points
+cd closest_points
 ```
 
 I use pipenv for developing this project so I recommend you to create a virtual environment and activate it.
@@ -48,11 +62,10 @@ Then follow these steps:
 1. Move to root folder 
 
 ```bash
-cd django_angular
+cd closest_points
 ```
-2. Create a `.env` file in the root folder, provide the required database information  to the `.env` file (.env.example file is provided to help set this information)
 
-3. Create the tables with the django command 
+2. Create the tables with the django command 
 
 ```bash
 python manage.py makemigrations
